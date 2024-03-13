@@ -1,1 +1,18 @@
-{"message":"Bienvenid@ esta es una prueba de fast api en GitHub!"}[{"username":"thomasstephanie","email":"griffinlynn@example.net"},{"username":"tmoore","email":"danielsstephen@example.net"},{"username":"littlebeth","email":"wcollins@example.org"},{"username":"hurleyemily","email":"fbenson@example.com"},{"username":"omorgan","email":"marygarcia@example.com"},{"username":"vicki29","email":"chavezkirsten@example.com"},{"username":"holmesallison","email":"paulafreeman@example.com"},{"username":"janegonzalez","email":"qmartin@example.com"},{"username":"hillwendy","email":"krausecourtney@example.com"},{"username":"rmitchell","email":"jmarshall@example.com"}]{"username":"jeffreywilson","email":"john16@example.org"}{"username":"john_doe","email":"john.doe@example.com"}{"username":"updated_username","email":"updated.email@example.com"}Internal Server Error
+------------------------------------------
+Solicitud a http://localhost:8000/:
+{"message":"Bienvenid@ esta es una prueba de FastAPI en GitHub!"}
+------------------------------------------
+Solicitud a http://localhost:8000/users/:
+[{"username":"uyoder","email":"carmen84@example.com"},{"username":"leroymartinez","email":"dalton44@example.org"},{"username":"kristinwatson","email":"nhernandez@example.net"},{"username":"jeffreywashington","email":"andreaalexander@example.org"},{"username":"amurillo","email":"briannasnyder@example.org"},{"username":"ayalajessica","email":"andrew23@example.com"},{"username":"neil40","email":"emathis@example.net"},{"username":"caitlin18","email":"brandon27@example.com"},{"username":"albertrodgers","email":"reedjasmine@example.net"},{"username":"scottjarvis","email":"george63@example.org"}]
+------------------------------------------
+Solicitud a http://localhost:8000/user/1:
+{"username":"robertsautumn","email":"otanner@example.com"}
+------------------------------------------
+Solicitud a http://localhost:8000/user/:
+{"username":"john_doe","email":"john.doe@example.com"}
+------------------------------------------
+Solicitud a http://localhost:8000/user/1:
+{"username":"updated_username","email":"updated.email@example.com"}
+------------------------------------------
+Solicitud a http://localhost:8000/user/1:
+{"message":"Usuario 1 eliminado exitosamente"}

@@ -33,3 +33,4 @@ logs/
 
 # Archivos de configuración local
 .local/
+.pytest_cache
