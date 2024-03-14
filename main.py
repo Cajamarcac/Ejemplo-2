@@ -20,26 +20,26 @@ async def read_users():
 
 @app.get("/", response_model=dict)
 async def read_root():
-    return {"message": "Bienvenid@ esta es una prueba de fast api en GitHub!"}
-
-# Otros Endpoints:
+    return {"message": "Bienvenid@ esta es una prueba de FastAPI en GitHub!"}
 
 @app.get("/user/{user_id}", response_model=User)
 async def read_user(user_id: int):
-    # Lógica para obtener información de un usuario específico (simulado con Faker)
+    if user_id < 1 or user_id > 10:
+        raise HTTPException(status_code=404, detail="Usuario no encontrado")
     return User(username=fake.user_name(), email=fake.email())
 
 @app.post("/user/", response_model=User)
 async def create_user(user: User):
-    # Lógica para crear un nuevo usuario (puede almacenarse en una base de datos, por ejemplo)
     return user
 
 @app.put("/user/{user_id}", response_model=User)
 async def update_user(user_id: int, user: User):
-    # Lógica para actualizar la información de un usuario existente
+    if user_id < 1 or user_id > 10:
+        raise HTTPException(status_code=404, detail="Usuario no encontrado")
     return user
 
-@app.delete("/user/{user_id}", response_model=User)
+@app.delete("/user/{user_id}", response_model=dict)
 async def delete_user(user_id: int):
-    # Lógica para eliminar un usuario
-    return {"message": f"User {user_id} deleted successfully"}
+    if user_id < 1 or user_id > 10:
+        raise HTTPException(status_code=404, detail="Usuario no encontrado")
+    return {"message": f"Usuario {user_id} eliminado exitosamente"}
