@@ -19,11 +19,11 @@ jobs:
     
     #Construir la imagen
       - name: Build Docker image
-        run: docker build -t app_image:1.0.0 .
+        run: docker build -t app_image:1.0 .
 
     #Ejecutar la imagen Docker
       - name: Run Docker container
-        run: docker run -d -p 8000:8000 app_image:1.0.0
+        run: docker run -d -p 8000:8000 app_image:1.0
 
     #Ejecutar pruebas de integración
       - name: Run integration tests
@@ -42,8 +42,8 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Tag Docker image
-        run: docker tag app_image:1.0.0 app_training_1:1.0.0
+        run: docker tag app_image:1.0.0 app_training_1:1.0
 
       - name: Push Docker image
         run: |
-            docker push fabiocajamarca/app_training_1:1.0.0
+            docker push fabiocajamarca/app_training_1:1.0
